@@ -1,8 +1,11 @@
+.PHONY: sauce isauce
+
+# Environment variables
 URL?=unknown
 SAUCE_USERNAME?=unknown
 SAUCE_ACCESS_KEY?=unknown
 
-# Node module variables
+# Node modules
 MOCHA=./node_modules/.bin/mocha
 MOCHA_PARALLEL=./node_modules/.bin/mocha-parallel-tests
 
