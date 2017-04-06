@@ -1,15 +1,19 @@
 # Automated Web Test
-Automated web testing using [Selenium][selenium], [Mocha][mochjs] and [SauceLabs][saucelabs].
+
+Automated web testing using [Selenium][selenium], [Mocha][mochjs], [Chai][chaijs] and [SauceLabs][saucelabs].
 
 
-## Requirements
+## Prerequisities
+
 This app requires the following:
+
 * [Node][node]
 * [NPM][npm]
 * [SauceLabs account][saucelabs]
 
 
 ## Getting Started
+
 Setup the main application repository:
 
 ```bash
@@ -22,15 +26,14 @@ npm i
 
 
 ## Running tests
-This runs concurrent test
-### `make sauce`
 
+This runs concurrent tests within SauceLabs
 
-## Running incremental tests
-### `make isauce`
+### `make test`
 
 
 ## Contributing
+
 If you wish to submit a bug fix or feature, you can create a pull request and it will be merged pending a code review.
 
 1. Fork the repository
@@ -40,9 +43,10 @@ If you wish to submit a bug fix or feature, you can create a pull request and it
 1. Create a new Pull Request
 
 
-[selenium]: http://docs.seleniumhq.org/
+[selenium]: http://docs.seleniumhq.org
 [sel-doc]: https://seleniumhq.github.io/selenium/docs/api/javascript/index.html
-[mochjs]: http://mochajs.org/
-[saucelabs]: https://saucelabs.com/
-[node]: https://nodejs.org/en/
+[mochjs]: http://mochajs.org
+[chaijs]: http://chaijs.com
+[saucelabs]: https://saucelabs.com
+[node]: https://nodejs.org/en
 [npm]: https://www.npmjs.com
