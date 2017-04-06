@@ -1,25 +1,26 @@
 {
-  "name": "automated-web-test",
-  "version": "1.0.0",
-  "description": "Automated web testing",
-  "main": "index.js",
-	"engines": {
-    "node": "7.x"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ukparliament/parliament.uk-awt.git"
-  },
-  "author": "UK Parliament",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ukparliament/parliament.uk-awt/issues"
-  },
-  "homepage": "https://github.com/ukparliament/parliament.uk-awt#readme",
-  "devDependencies": {
-    "mocha": "^3.2.0",
-    "mocha-parallel-tests": "^1.2.6",
-    "saucelabs": "^1.4.0",
-    "selenium-webdriver": "^3.1.0"
-  }
+    "name": "automated-web-test",
+    "version": "1.0.0",
+    "description": "Automated web testing",
+    "dependencies": {
+        "chai": "^3.5.0",
+        "mocha": "^3.2.0",
+        "mocha-parallel-tests": "^1.2.8",
+        "saucelabs": "^1.4.0",
+        "selenium-webdriver": "^3.3.0"
+    },
+    "devDependencies": {
+        "chromedriver": "^2.28.0",
+        "geckodriver": "^1.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ukparliament/parliament.uk-awt.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ukparliament/parliament.uk-awt/issues"
+    },
+    "homepage": "https://github.com/ukparliament/parliament.uk-awt#readme",
+    "author": "UK Parliament",
+    "license": "MIT"
 }
