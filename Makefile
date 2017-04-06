@@ -1,7 +1,7 @@
-.PHONY: sauce isauce
+.PHONY: test itest clean
 
 # Environment variables
-URL?=unknown
+DOMAIN?=unknown
 SAUCE_USERNAME?=unknown
 SAUCE_ACCESS_KEY?=unknown
 
@@ -11,10 +11,17 @@ MOCHA_PARALLEL=./node_modules/.bin/mocha-parallel-tests
 
 
 # Concurrent test
-sauce:
-	@env URL=$(URL) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA_PARALLEL) test/
+test:
+	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA_PARALLEL) test/
 
 
 # Incremental test
-isauce:
-	@env URL=$(URL) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA) --no-timeouts
+itest:
+	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA) test/
+
+
+# removes all SauceLabs jobs and linked assets
+# removes all local screenshots
+clean:
+	@env SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) node scripts/clean.js
+	@rm -rf screenshot/*.png
