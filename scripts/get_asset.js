@@ -20,18 +20,6 @@ const fs = require('fs'),
 			});
 
 
-// SauceLabs.prototype.getJobAssetsFiles = function (id, filename, callback) {
-//   this.send({
-//     method: 'GET',
-//     path: ':username/jobs/:id/assets/:filename',
-//     args: { id: id, filename: filename }
-//   }, callback);
-// };
-
-
-
-
-
 saucelabs.getJobs(function (err, jobs) {
 	for (let i = 0; i < jobs.length; i++) {
 		let assetDir = screenshot + jobs[i].id;
@@ -40,9 +28,7 @@ saucelabs.getJobs(function (err, jobs) {
 		}
 		saucelabs.showJobAssets(jobs[i].id, function (err, res) {
 			for (let s = 0; s < res.screenshots.length; s++) {
-
 				writeSh('cd ' +assetDir+ ' && { curl -u ' +username+ ':' +accessKey+ ' -O https://saucelabs.com/rest/v1/' +username+ '/jobs/' +jobs[i].id+ '/assets/' +res.screenshots[s]+ '; cd -; } \n');
-
 			}
 		});
 	}
