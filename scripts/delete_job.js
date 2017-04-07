@@ -1,10 +1,9 @@
 /**
  * @fileOverview
  *
- * removes all SauceLabs jobs and linked assets
- * removes all local screenshots
+ * Removes the job from the system with all the linked assets
  *
- * https://wiki.saucelabs.com/display/DOCS/The+Sauce+Labs+REST+API
+ * https://wiki.saucelabs.com/display/DOCS/Job+Methods#JobMethods-DeleteJob
  * https://www.npmjs.com/package/saucelabs
  */
 

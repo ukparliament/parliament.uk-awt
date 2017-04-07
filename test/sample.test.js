@@ -8,10 +8,7 @@
 
 const test = require('selenium-webdriver/testing'),
     webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until,
     chai = require('chai'),
-    assert = chai.assert,
     browser = require('../config/browser'),
 		url = require('../config/path'),
     helper = require('./helper.js'),
@@ -69,7 +66,6 @@ for (let i = 0; i < browser.capabilities.length; i++) {
 					driver.get(process.env.DOMAIN + url.path[d]);
 
 					driver.getTitle().then(function (title) {
-						// assert.equal(title, title);
 						console.log(title);
 					});
 
