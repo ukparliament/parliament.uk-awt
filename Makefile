@@ -12,13 +12,11 @@ MOCHA_PARALLEL=./node_modules/.bin/mocha-parallel-tests
 
 # Concurrent test
 test:
-	@mkdir -p screenshot
 	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA_PARALLEL) test/
 
 
 # Incremental test
 itest:
-	@mkdir -p screenshot
 	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA) --no-timeouts test/
 
 
@@ -26,7 +24,7 @@ itest:
 # removes all local screenshots
 clean:
 	@env SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) node scripts/delete_job.js
-	@rm -rf screenshot/*
+	@rm -rf screenshot/
 
 
 # Download all assets

@@ -22,7 +22,7 @@ const fs = require('fs'),
 
 saucelabs.getJobs(function (err, jobs) {
 	for (let i = 0; i < jobs.length; i++) {
-		let assetDir = screenshot + jobs[i].id;
+		let assetDir = screenshot + jobs[i].id+ '--' + jobs[i].name;
 		if (!fs.existsSync(assetDir)) {
 			fs.mkdirSync(assetDir);
 		}
