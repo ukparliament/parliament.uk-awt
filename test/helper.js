@@ -7,7 +7,7 @@
 'use strict';
 
 const fs = require('fs'),
-	work_dir = process.cwd() + '/screenshot/';
+			work_dir = process.cwd() + '/screenshot/';
 
 let i = 0;
 
