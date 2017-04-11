@@ -31,5 +31,5 @@ clean:
 asset:
 	@mkdir -p screenshot
 	@env SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) node scripts/get_asset.js
-	@chmod +x asset.sh && ./asset.sh
+	@chmod u+x asset.sh && ./asset.sh
 	@rm asset.sh
