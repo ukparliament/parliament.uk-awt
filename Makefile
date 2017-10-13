@@ -1,7 +1,8 @@
 .PHONY: test itest clean asset
 
 # Environment variables
-DOMAIN?=unknown
+# Ensure hypertext protocol is specified (http:// or https://) on url
+DOMAIN?=http://example.com
 SAUCE_USERNAME?=unknown
 SAUCE_ACCESS_KEY?=unknown
 
@@ -12,7 +13,7 @@ MOCHA_PARALLEL=./node_modules/.bin/mocha-parallel-tests
 
 # Concurrent test
 test:
-	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA_PARALLEL) test/
+	@env DOMAIN=$(DOMAIN) SAUCE_USERNAME=$(SAUCE_USERNAME) SAUCE_ACCESS_KEY=$(SAUCE_ACCESS_KEY) $(MOCHA_PARALLEL) --no-timeouts test/
 
 
 # Incremental test
