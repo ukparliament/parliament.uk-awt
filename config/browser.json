@@ -13,7 +13,8 @@
 		},
 		{
 			"name": "Desktop-Safari-10",
-			"browserName": "safari",
+      "browserName": "safari",
+      "platform": "Mac 10.12",
 			"version": "10"
 		},
 		{
@@ -29,16 +30,16 @@
 			"version": "56"
 		},
 		{
-			"name": "Desktop-MAC-Firefox-51",
+			"name": "Desktop-MAC-Firefox-57",
 			"browserName": "firefox",
 			"platform": "Mac 10.12",
-			"version": "51"
+			"version": "57"
 		},
 		{
-			"name": "Desktop-WIN-Firefox-51",
+			"name": "Desktop-WIN-Firefox-57",
 			"browserName": "firefox",
 			"platform": "Windows 10",
-			"version": "51"
+			"version": "57"
 		}
 	]
 }
